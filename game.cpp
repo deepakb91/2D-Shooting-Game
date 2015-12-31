@@ -121,15 +121,15 @@ void PLAYER::ADMIT(void)
 
     do
     {
-	    valid=1;
-	    gotoxy(5,25);
-    	cout<<"Enter class of player";
-    	gotoxy(34,15);
+      valid=1;
+      gotoxy(5,25);
+      cout<<"Enter class of player";
+      gotoxy(34,15);
       gets(clas);
-    	strupr(clas);
-    	if(clas[0]=='0')
-    	  return;
-    	if(strlen(clas)<1||strlen(clas)>3)
+      strupr(clas);
+      if(clas[0]=='0')
+      	return;
+      if(strlen(clas)<1||strlen(clas)>3)
     	{
     	  valid=0;
     	  gotoxy(5,25);
@@ -685,7 +685,7 @@ void main()
       outtextxy(70,280,"CORRECT ANSWER IS 'D'");
       for(counter=16;counter<=166;counter++)
       {
-  sound(1000+(100*counter));
+  	sound(1000+(100*counter));
 	delay(10);
       }
       nosound();
@@ -945,7 +945,7 @@ void main()
       for (counter=16;counter<=166;counter++)
       {
 	sound(1000+(100*counter));
-  delay(10);
+  	delay(10);
       }
       nosound();
       start();
@@ -1758,9 +1758,9 @@ int shootgame()    // The game
     outtextxy(85,350,"Press any key to start the game");
     if(ch==char(27))
     {
-    setcolor(10);
-    settextstyle(7,HORIZ_DIR,3);
-    outtextxy(145,96,"You Did Not Play the Game");
+       setcolor(10);
+       settextstyle(7,HORIZ_DIR,3);
+       outtextxy(145,96,"You Did Not Play the Game");
     }
     // Animation Randomizations
     animate:
@@ -1796,28 +1796,28 @@ int shootgame()    // The game
     	switch(casemiss)
     	{
     	    case 1  : pieslice ( 320 - 270, 477, 0, 180,30);
-    		 break;
+    		      break;
     	    case 2  : pieslice ( 320 + 270, 477, 0, 180,30);
-    		 break;
+    		      break;
     	    case 3  : pieslice ( 320 - 180, 477, 0, 180,30);
-    		 break;
+    		      break;
     	    case 4  : pieslice ( 320 + 270, 477, 0, 180,30);
-    		 break;
+    		      break;
     	    case 5  : pieslice ( 320 - 90, 477, 0, 180,30);
-    		 break;
+    		      break;
     	    case 6  : pieslice ( 320 + 90, 477, 0, 180,30);
-    		 break;
+    		      break;
     	    case 7  : pieslice ( 320 , 477, 0, 180,30);
-    	      settextstyle (11, HORIZ_DIR,1);
-    	      showint (600, 68, miss-1,0);
-  	      showint (600, 68, miss, 15);
-  	      showint (660, 86, gamelength*7-miss+1, 0);
-  	      showint (660, 86, gamelength*7-miss, 15);
-  	      setcolor(15) ;
-  	      setlinestyle(SOLID_LINE, 1, 3);
-  	      rectangle(0, 0, 639, 479);
-  	      delay(1000);
-  	      goto  end;
+    	      	      settextstyle (11, HORIZ_DIR,1);
+    	              showint (600, 68, miss-1,0);
+  	              showint (600, 68, miss, 15);
+  	              showint (660, 86, gamelength*7-miss+1, 0);
+  	              showint (660, 86, gamelength*7-miss, 15);
+  	              setcolor(15) ;
+  	              setlinestyle(SOLID_LINE, 1, 3);
+  	              rectangle(0, 0, 639, 479);
+  	              delay(1000);
+  	              goto  end;
 
 	}
 			  //  play sound on miss
